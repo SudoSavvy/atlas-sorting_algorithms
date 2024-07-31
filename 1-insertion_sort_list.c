@@ -8,7 +8,7 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-    listint_t *current, *key, *temp;
+    listint_t *current, *key;
 
     if (list == NULL || *list == NULL || (*list)->next == NULL)
         return;
@@ -23,7 +23,7 @@ void insertion_sort_list(listint_t **list)
         while (key->prev != NULL && key->n < key->prev->n)
         {
             swap_nodes(list, key->prev, key);
-            print_list(*list);  // Print the list after swapping
+            print_list(*list);  /* Print the list after swapping */
         }
     }
 }
